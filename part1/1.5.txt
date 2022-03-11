@@ -1,0 +1,22 @@
+tanar@DESKTOP-M5SIVG8 ~/DevopsDocker/part1
+$ docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED         SIZE
+ubuntu                              latest    2b4cba85892a   5 days ago      72.8MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   12 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   12 months ago   15.7MB
+
+As we can see, the alpine-version is much smaller
+
+tanar@DESKTOP-M5SIVG8 ~/DevopsDocker/part1
+$ docker run -d -it --name alpine devopsdockeruh/simple-web-service:alpine
+69de2384bf7ab9b162f7250da65ce324e4278d439ace4f42474bb6cc6d8b3868
+
+tanar@DESKTOP-M5SIVG8 ~/DevopsDocker/part1
+$ docker exec -it alpine sh
+/usr/src/app # tail -f ./text.log
+2022-03-09 14:06:57 +0000 UTC
+2022-03-09 14:06:59 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-03-09 14:07:01 +0000 UTC
+
+and secret message is still working

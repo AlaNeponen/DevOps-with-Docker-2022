@@ -1,0 +1,23 @@
+tanar@DESKTOP-M5SIVG8 ~/DevopsDocker/part1
+$ docker pull devopsdockeruh/simple-web-service:ubuntu
+ubuntu: Pulling from devopsdockeruh/simple-web-service
+5d3b2c2d21bb: Pull complete
+3fc2062ea667: Pull complete
+75adf526d75b: Pull complete
+965d4bbb586a: Pull complete
+4f4fb700ef54: Pull complete
+Digest: sha256:d44e1dce398732e18c7c2bad9416a072f719af33498302b02929d4c112e88d2a
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:ubuntu
+docker.io/devopsdockeruh/simple-web-service:ubuntu
+
+tanar@DESKTOP-M5SIVG8 ~/DevopsDocker/part1
+$ docker run -d --name web 4e33
+26b493a6860ec33c52b555412076b57775a96a509600eedfd4f9454759d76b45
+
+tanar@DESKTOP-M5SIVG8 ~/DevopsDocker/part1
+$ docker exec -it web bash
+root@26b493a6860e:/usr/src/app# tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-03-04 23:20:38 +0000 UTC
+2022-03-04 23:20:40 +0000 UTC
+2022-03-04 23:20:42 +0000 UTC

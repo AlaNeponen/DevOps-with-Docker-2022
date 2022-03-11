@@ -1,0 +1,20 @@
+$ docker run -it --name ses ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+Second terminal:
+$ docker exec -it ses bash
+    root@741992c76fcc:/# apt update
+    root@741992c76fcc:/# apt install curl
+    ^P^Q root@741992c76fcc:/# read escape sequence
+
+Output:
+
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
+</body></html>

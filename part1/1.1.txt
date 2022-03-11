@@ -1,0 +1,6 @@
+tanar@DESKTOP-M5SIVG8 ~/DevopsDocker/part1
+$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                      PORTS     NAMES
+fb51192b6cb6   nginx     "/docker-entrypoint.…"   55 seconds ago       Exited (0) 27 seconds ago             goofy_ardinghelli
+109a544908db   nginx     "/docker-entrypoint.…"   58 seconds ago       Exited (0) 27 seconds ago             fervent_burnell
+db9a2d700bd2   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute           80/tcp    relaxed_bhaskara

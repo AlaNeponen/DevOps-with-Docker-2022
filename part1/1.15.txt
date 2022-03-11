@@ -1,0 +1,19 @@
+https://hub.docker.com/repository/docker/alaneponen/ristinolla
+
+Dockerfile used:
+
+FROM gradle:6.9.2-jdk8 as build
+
+COPY /Ristinolla-AI /usr/src/gradle
+
+WORKDIR /usr/src/gradle
+
+RUN gradle build
+
+FROM openjdk:8-alpine
+
+WORKDIR /usr/src/app
+
+COPY --from=build /usr/src/gradle/build/libs/*.jar /usr/src/app
+
+CMD ["java", "-jar", "Ristinolla-AI.jar"]

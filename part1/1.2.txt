@@ -1,0 +1,7 @@
+tanar@DESKTOP-M5SIVG8 ~/DevopsDocker/part1
+$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+tanar@DESKTOP-M5SIVG8 ~/DevopsDocker/part1
+$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
