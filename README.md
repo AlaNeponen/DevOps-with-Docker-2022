@@ -1,2 +1,2 @@
 # DevOps-with-Docker-2022
-Course exercise solutions
+My solutions for the 2022 DevOps with Docker course exercises
