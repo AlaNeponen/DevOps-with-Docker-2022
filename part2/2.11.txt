@@ -1,0 +1,9 @@
+The project I chose was a song lyric generator. It creates new song lyrics with a Markov chain -esque process, 
+using a storage of old song lyrics to calculate the required probabilities.
+
+I used to store all the old lyrics in a single really long string (I was in a bit of a hurry), but
+now I've setup a postgresql-database for them with docker. I also decided to change the generator
+into a single page react app, where the frontend consists of a button that when pressed displays
+the generated lyrics, while the backend consists of the algorithim itself and the necessary queries.
+
+Both database and app are run from a single docker-compose.yml

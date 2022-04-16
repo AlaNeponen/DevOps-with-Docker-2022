@@ -1,0 +1,5 @@
+With nginx working as a reverse proxy, the backend_url and request_origin 
+variables were using incorrect values, so I changed them to match the current addresses.
+
+I also removed the port-declarations for frontend and backend from the docker-compose, 
+since they are no longer used to access the containers outside the network.
